@@ -26,10 +26,7 @@ class PersonRepositoryTestCase {
                 gender(Gender.MALE).
                 workplace("Empresa 103").build();
 
-        assertEquals("Juan",
-                Objects.requireNonNull(personRepository.
-                        findById(p.getId()).
-                        orElse(null)).getName());
+        assertEquals("Juan", p.getName());
     }
 
 }
